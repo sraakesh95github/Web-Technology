@@ -1,0 +1,54 @@
+#mylist {
+    opacity: 0;
+    transition: transform 0.5s ease,
+                opacity 0.5s ease;
+}
+
+#mylist.fade-in {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+#mylist.fade-out {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.list-group-item {
+    border: 0px;
+    background-color: rgb(241,241,241);
+    width: 190px;
+}
+
+#mybutton {
+    position: relative;
+    cursor: pointer;
+    /* border-bottom: 5px solid rgb(255, 198, 39); */
+    font-family: Roboto,Helvetica,Helvetica,Arial,sans-serif;
+    font-size: 36px;
+    font-weight: 700 !important;
+    color: #212529;
+    z-index: 1;
+}
+
+.list-group .list-group-item {
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: Roboto,Helvetica,Helvetica,Arial,sans-serif;
+    font-weight: 700 !important;
+}
+
+#horizontal-line {
+    background-color: rgb(255, 198, 39);
+    height: 5px;
+    width: 215px;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}

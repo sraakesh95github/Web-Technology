@@ -1,0 +1,28 @@
+{
+  "name": "@rds/asuo-theme",
+  "version": "3.5.2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/edplusasu/rocket-design-system/src/master/"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.15.0"
+  },
+  "license": "MIT",
+  "homepage": "https://npm.edpl.us/-/web/detail/@rds/asuo-theme",
+  "author": {
+    "name": "Dipak Purbey",
+    "email": "dpurbey@asu.edu"
+  },
+  "devDependencies": {
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.11"
+  },
+  "gitHead": "817bf4f6a874fb7404d069f5793e8a74986dffad"
+}

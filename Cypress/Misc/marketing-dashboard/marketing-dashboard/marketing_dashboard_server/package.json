@@ -1,0 +1,20 @@
+{
+  "name": "marketing_dashboard_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "load-json-file": "^5.1.0",
+    "mixpanel-data-export": "^2.0.2",
+    "mongodb": "^3.1.8",
+    "path": "^0.12.7",
+    "xls-to-json": "^0.5.1"
+  }
+}

@@ -1,0 +1,75 @@
+1. Sass loader instead of Less
+2. Libsass to compile faster
+3. Glyphicons not used. Instead Font-awesome used
+4. Sizing and Spacing classes
+5. Live server tool used
+6. Boilerplates: templates for faster and easier coding
+7. Emit: VERY IMPORTANT [Gives the shortcut on various tags in html]
+8. Use a CDN to get the bootstrap
+9. slim jquery used in the tutorial
+10. Sticky
+11. 16px is the default font size
+12. h1 - h6
+13. REM ; EM
+14. Breakpoints
+15. Spans: inline text
+16. Block-level elements [2 - 6:05]
+17.     Divs
+18.     Powergraphs
+19.     Headings
+        Use "d-block" to make it secondary
+
+20. Inline elements [2 - 6:32]
+21.     Span
+22.     Use d-inline class
+
+23. Gutter spacing between spans
+24. 
+21. 14. Typography Classes:
+    14. class: display-1 thru' 4 classes [starts with 6rem and decrements by 0.5]
+    15. class: lead [to make a paragraph more prominent]
+    16. monospace
+    17. font-weight-bold
+    18. font-italic
+    19. text-lowercase
+    20. text-uppercase
+    21. text-capitalize
+    22. blockquote
+    23. blockquote text-right
+    24. blockquote text-left
+    25. blockquote-footer
+    26. text-truncate
+    27. list-unstyled
+    28. list-inline
+    29. list-inline-item
+15. Text Alignment and Display:
+    1. text-justify
+    2. text-left
+    3. text-right
+    4. text-center
+    5. text-sm-right
+    6. text-md-right
+    7. text-lg-right
+    8. text-xl-right
+    9. align-baseline
+    10. align-top
+    11. align-middle
+    12. align-text-top
+    13. d-inline-block
+16. Floats and Positioning:
+17.     float-left
+18.     float-sm-right
+19. list-group-item
+20. list-group-flush
+21. badge badge-primary
+22. d-flex justify-content-between align-items-center
+23. breadcrumb
+24. breadcrumb-item active
+25. form-group
+26. form-control
+27. form-control-file
+27. form-text
+28. text-muted / text-primary
+29. custom-file
+30. custom-file-input
+31. custom-file-label

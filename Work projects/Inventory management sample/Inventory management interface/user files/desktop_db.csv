@@ -1,0 +1,8 @@
+﻿id,type,price,status,issues
+,XPS Desktop,500,SOLD,No issues
+,Inspiron Desktop,350,RESTOCKING,Display brightness
+,Dell OptiPlex,280,AVAILABLE,No issues
+,HP Slim Desktop,450,RESTOCKING,Too big
+,HP All-in-one computer,320,RESTOCKING,No issues
+,HP Pavillion,800,SOLD,No issues
+,Cyber Power PC,750,AVAILABLE,Fan inefficient

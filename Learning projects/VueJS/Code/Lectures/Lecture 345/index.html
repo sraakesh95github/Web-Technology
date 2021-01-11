@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8e01524338.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <p>{{ testing() }}</p>
+    <hr>
+    <button class="btn btn-primary"
+    v-on:mousemove="getMouseCoordinates">Testing <span class="bg-warning" v-on:mousemove.stop=""> Done</span></button>
+    <p class="lead"> X Coordinate: {{xCoord}}</p>
+    <p class="lead"> Y Coordinate: {{yCoord}}</p>
+    
+    <hr>
+    <button class="btn btn-secondary"
+    v-on:click="increment(step, $event)">Increase</button>
+    <input type="number" class="form-input" v-on:input="getStep">
+    <p>{{counter}}</p>
+    <p>{{ counter > 10 ? 'Greater than 10' : 'Less than 10' }}</p>
+    <hr>
+    <input type="text" class="form-input"
+    v-on:keyup.enter="alertMe">
+    <hr>
+    <div class="container">
+      <div class="row">l
+        <div class="col-md-3">
+          <div class="card">l
+            <div class="card-body">
+              <div class="form">
+                    <input type="text" class="form-input"
+                v-model="inputText" placeholder="Test element">
+                <div class="card-footer p-0 m-0 bg-info text-white">
+                    <p class="lead">Input Text: {{inputText}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>l
+      </div>
+    </div>
+ 
+    <hr>
+
+    <section class="text-center">
+      <div class="header">
+          <div class="py-2 bg-secondary text-white">
+            <p class="display-4">
+            Computed Property vs Methods
+            </p>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-header mb-3">
+                  Counter 1
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <button class="btn btn-success btn-block" v-on:click="increase">
+                      <fas class="fas fa-plus"></fas>
+                    </button>
+                  </div>
+                  <div class="col-md-6">
+                    <button class="btn btn-danger btn-block text-white" v-on:click="decrease">
+                      <fas class="fas fa-minus"></fas>
+                    </button>
+                  </div>
+                </div>
+              
+                <hr>
+                <div class="card-footer bg-info text-white">
+                  {{counter1}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-header mb-3">
+                  Counter 2
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <button class="btn btn-success btn-block" v-on:click="increaseCounter2">
+                      <fas class="fas fa-plus"></fas>
+                    </button>
+                  </div>
+                  <div class="col-md-6">
+                    <button class="btn btn-danger btn-block text-white" v-on:click="decreaseCounter2">
+                      <fas class="fas fa-minus"></fas>
+                    </button>
+                  </div>
+                </div>
+              
+                <hr>
+                <div class="card-footer bg-info text-white">
+                  {{counter2}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card mb-3">
+                <div class="card-header">
+                  Computed
+                </div>
+                <div class="card-body">
+                  {{outputCounter}}
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  Method
+                </div>
+                <div class="card-body">
+                  {{result()}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col">
+
+        </div>
+      </div>
+    </section>
+
+    <button v-on:click="incrementCount3">Increment</button>
+    <p>Counter: {{counter3}}</p>
+  </div>
+ 
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        test: '',
+        xCoord: 0,
+        yCoord: 0,
+        step: 0,
+        counter: 0,
+        inputText: '',
+        counter1: 0,
+        counter2: 0,
+        counter3: 0
+      },
+      computed: {
+        outputCounter() {
+          console.log("Computed output...")
+          return this.counter1 > 5? 'Greater than 5':'Less than 5'
+        }
+      },
+      watch: {
+        counter3() {
+          var vm = this;
+          setTimeout(function() {
+            vm.counter3 = -2
+          }, 4000);
+        }
+      },
+      methods: {
+        testing() {
+          return "testing";
+        },
+        getMouseCoordinates(event) {
+          this.xCoord = event.clientX;
+          this.yCoord = event.clientY;
+        },
+        increment(step, event) {
+          this.counter = Number(this.counter) + Number(this.step);
+          // console.log(this.counter);
+        },
+        getStep(event) {
+          this.step = event.target.value;
+          // console.log(this.step);
+        },
+        alertMe() {
+          alert("This is an alert...");
+        },
+        result() {
+          console.log("Method output...")
+          return this.counter1 > 5? 'Greater than 5':'Less than 5'
+        },
+        increase() {
+          this.counter1 += 1;
+        },
+        decrease() {
+          this.counter1 -= 1;
+        },
+        increaseCounter2() {
+          this.counter2 += 1;
+        },
+        decreaseCounter2() {
+          this.counter2 -= 1;
+        },
+        incrementCount3() {
+          this.counter3 += 1;
+        }
+      }
+    })
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+  margin: 100px;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  background: #3DCCC7;
+  /* transition-duration: 1.5s;
+  transition-property: background;
+  transition-property: background, transform, width, height;
+  transition-timing-function: cubic-bezier(0.6,-0.6, 0.36, 1.47);
+  transition-delay: 0.1s; */
+
+  transition: background 1s 250ms cubic-bezier(0.6,-0.6, 0.36, 1.47),
+  width 1s 250ms cubic-bezier(0.6,-0.6, 0.36, 1.47),
+  height 1s 250ms cubic-bezier(0.6,-0.6, 0.36, 1.47),
+  transform 1s 250ms cubic-bezier(0.6,-0.6, 0.36, 1.47);
+}
+
+.box:hover {
+  background: #FF6B6B;
+  transform: rotate(45deg);
+  width: 250px;
+  height: 250px;
+}

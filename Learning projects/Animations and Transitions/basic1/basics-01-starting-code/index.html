@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+    <section id="user-goal">
+      <h1 :click="dropdown()"><u>admission</u>
+      <i class="fas fa-caret-down"></i></h1>
+      <div>
+          
+      </div>
+
+      <div class="container">
+
+          <div class="row" id="mylist">
+              <div class="col-md-5">
+                <ul class="list-group">
+                    <li class="list-group-item pl-5"><h3>admission</h3></li>
+                    <li class="list-group-item pl-5"><h3>online degrees</h3></li>
+                    <li class="list-group-item pl-5"><h3>costs</h3></li>
+                    <li class="list-group-item pl-5"><h3>online students</h3></li>
+                </ul>
+              </div>
+          </div>
+
+        </div>
+    </section>
+  </body>
+</html>

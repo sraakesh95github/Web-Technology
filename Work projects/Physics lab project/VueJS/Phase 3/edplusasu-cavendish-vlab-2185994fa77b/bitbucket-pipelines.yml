@@ -1,0 +1,41 @@
+pipelines:
+  default:
+    - step:
+        name: Test and build artifacts
+        image: node:dubnium
+        caches:
+          - node
+        deployment: test
+        script:
+          - git config --global url."https://bitbucket.org/".insteadOf git@bitbucket.org/
+          - git config --global url."https://".insteadOf git://
+          - yarn install
+          - yarn run build
+        artifacts:
+          - dist/**
+    - step:
+        name: Deploy to staging
+        image: node:dubnium
+        caches:
+          - node
+        deployment: staging
+        trigger: manual
+        script:
+          - yarn add -D deploy-aws-s3-cloudfront@3.2.4
+          - yarn run deploy-aws-s3-cloudfront --source "./dist/" --bucket "$S3_BUCKET_NAME" --destination "$BITBUCKET_REPO_SLUG" --distribution "$CF_DISTRIBUTION" --invalidation-path "/$BITBUCKET_REPO_SLUG/*" --non-interactive
+          - printf "STAGING URL https://test.%s/%s/" "$BASE_DOMAIN_NAME" "$BITBUCKET_REPO_SLUG"
+        artifacts:
+          - dist/**
+    - step:
+        name: Deploy to production
+        image: node:dubnium
+        caches:
+          - node
+        deployment: production
+        trigger: manual
+        script:
+          - yarn add -D deploy-aws-s3-cloudfront@3.2.4
+          - yarn run deploy-aws-s3-cloudfront --source "./dist/" --bucket "$S3_BUCKET_NAME" --destination "$BITBUCKET_REPO_SLUG" --distribution "$CF_DISTRIBUTION" --invalidation-path "/$BITBUCKET_REPO_SLUG/*" --non-interactive
+          - printf "STAGING URL https://static.%s/%s/" "$BASE_DOMAIN_NAME" "$BITBUCKET_REPO_SLUG"
+        artifacts:
+          - dist/**

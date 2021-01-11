@@ -1,0 +1,51 @@
+{
+	"test": "Hello World",
+	"undergradList": [
+		"Anthropology (BA)",
+		"Applied Leadership (BAS)",
+		"Art (Digital Photography) (BFA)",
+		"Art - Museum Studies (BA)",
+		"Art History (BA)",
+		"Astronomical and Planetary Sciences (BS)",
+		"Biochemistry (BA)",
+		"Biochemistry (BS)",
+		"Biochemistry - Medicinal Chemistry",
+		"Biological Sciences (BS)",
+		"Biological Sciences - Biomedical Sciences (BS)",
+		"Biological Sciences – Biology and Society (BS)",
+		"Biological Sciences – Conservation Biology and Ecology (BS)",
+		"Business - Business Administration (BA)",
+		"Business - Communication (BA)",
+		"Business - Corporate Accounting (BA)",
+		"Business - Food Industry Management (BA)",
+		"Business - Global Leadership (BA)",
+		"Business - Global Logistics Management (BA)",
+		"Business - Sports Business (BA)",
+		"Business - Sustainability (BA)",
+		"Business - Tourism (BA)",
+		"History (BA)"
+	],
+	"gradList": [
+		"Aging (MS)",
+		"Behavioral Health (Clinical) (DBH)",
+		"Behavioral Health (Management) (DBH)",
+		"Biomedical Diagnostics (MS)",
+		"Biomimicry (MS)",
+		"Biosecurity and Threat Management (MA)",
+		"Business Analytics (MS)",
+		"Business Journalism (MS)",
+		"Clinical Research Management (MS)",
+		"Clinical Research Management - Regulatory Science (MS)",
+		"Communication (MA)",
+		"Community Resilience (MA)",
+		"History (MA)",
+		"World War II Studies (MA)"	
+	],
+	"interestHistory": [
+		"Art - Museum Studies (BA)",
+		"Art History (BA)",
+		"History (BA)",
+		"History (MA)",
+		"World War II Studies (MA)"
+	]
+}

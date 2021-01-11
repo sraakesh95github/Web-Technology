@@ -1,0 +1,12 @@
+1. Form validate
+2. Directive dependency - check for input directive in the form - input inbuilt
+3.  -> Blur
+4.  -> 
+3. Vuex is not the solution
+4. https://bootstrap-vue.org/docs/components/form-input
+5. Remove bootstrap as dependency
+6. https://bootstrap-vue.org/docs/components/form-input
+https://github.com/alexurquhart/vue-bootstrap-typeahead
+7. Sass
+8. Use core input tag
+9. Complete the input field first

@@ -1,0 +1,15 @@
+{
+  "name": "google-sheet",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.21.1",
+    "gridsome": "^0.7.0",
+    "vue-svg-loader": "^0.16.0",
+    "vuelidate": "^0.7.6"
+  }
+}

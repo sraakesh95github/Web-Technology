@@ -1,0 +1,12 @@
+Pre-meeting(12/28/2020):
+1. Prettier error: resolved by uninstalling Prettier Now
+2. Major difficulty: Using Vuex and localStorage for persistent storage of the list items on page refresh.
+3. Problems identified:
+    1. The below element below the card (i.e) readjusts itself
+4. To be implemented:
+    1. Scrollbar for large lists - Done
+    2. Down arrow icon on click - Done
+    3. Change cursor on hover - Done
+5. To be rectified:
+    1. Double click on the input field required for text entry -
+    2. Component below the autocomplete component shifting down when the options are displayed

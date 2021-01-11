@@ -1,0 +1,12 @@
+{
+  "excell": {
+      "enable" : true,
+      "filename" : "Understand_website_traffic.xlsx",
+      "sheetname" : "Understand_website_traffic",
+      "location" : "data/input/"
+  },
+  "output": {
+      "filename" : "output.json",
+      "location" : "data/output/"
+  }
+}
