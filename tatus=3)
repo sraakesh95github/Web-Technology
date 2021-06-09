@@ -1,0 +1,16 @@
+[0;1;31m●[0m gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2021-06-09 01:53:37 UTC; 19s ago
+TriggeredBy: [0;1;32m●[0m gunicorn.socket
+   Main PID: 33858 (code=exited, status=3)
+
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33871]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33871]:   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33871]:   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33871]:   File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33871]: ModuleNotFoundError: No module named 'Web-Technology'
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33871]: [2021-06-09 01:53:37 +0000] [33871] [INFO] Worker exiting (pid: 33871)
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33858]: [2021-06-09 01:53:37 +0000] [33858] [INFO] Shutting down: Master
+Jun 09 01:53:37 ip-172-31-93-178 gunicorn[33858]: [2021-06-09 01:53:37 +0000] [33858] [INFO] Reason: Worker failed to boot.
+Jun 09 01:53:37 ip-172-31-93-178 systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+Jun 09 01:53:37 ip-172-31-93-178 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
